@@ -42,7 +42,7 @@ Collect 5 answers — ask them one at a time using AskUserQuestion. Wait for eac
 
 1. "What's your name?"
 2. "Which platform are you writing hooks for? Options: LinkedIn / X / Instagram / TikTok / Substack / YouTube"
-3. "What are your top content pillars? List up to 3 with rough % weights. Example: Consumer Psychology 60%, AI Tools 25%, Career Growth 15%"
+3. "What are your top content pillars? List up to 3 with rough % weights. Example: Product Management 50%, Leadership 30%, Industry News 20%"
 4. "Describe your writing voice in one sentence. Example: 'Data-driven analyst who makes complex ideas feel simple and actionable.'"
 5. "Describe your target audience in 2-3 sentences. Who are they? What do they care about? What problems do they have?"
 
@@ -53,7 +53,7 @@ After collecting all 5 answers:
    - Platform behavior (check frequency, click rate, share behavior)
    - Key question they ask themselves when scrolling
    Make each persona vivid, specific, and grounded in the audience description.
-2. Write the complete config to `~/.claude/data/hook-lab/config.md` using the format defined in `config.default.md` (same schema, user values substituted).
+2. Ensure the data directory exists: run `mkdir -p ~/.claude/data/hook-lab` before writing. Then write the complete config to `~/.claude/data/hook-lab/config.md` using the format defined in `config.default.md` (same schema, user values substituted).
 3. Confirm: "Setup complete, [name]! Your Hook Lab is now tuned for your audience. Run `/hook-lab:hook-lab [your hook]` to test your first hook."
 
 ---

@@ -1,0 +1,15 @@
+{
+  "name": "EagleJD08",
+  "owner": { "name": "Juan Minoprio" },
+  "metadata": {
+    "description": "Hook Lab — test a LinkedIn hook 20 ways with a 5-persona AI jury."
+  },
+  "plugins": [
+    {
+      "name": "hook-lab",
+      "source": "./plugins/hook-lab",
+      "description": "Test a LinkedIn hook 20 ways with a 5-persona AI jury.",
+      "version": "1.0.0"
+    }
+  ]
+}

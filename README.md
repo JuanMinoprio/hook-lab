@@ -27,18 +27,18 @@ Two ways. Pick whichever you trust more.
 Inside Claude Code (type these in the Claude Code chat, not a separate terminal):
 
 ```
-/plugin marketplace add EagleJD08/hook-lab
-/plugin install hook-lab@EagleJD08
+/plugin marketplace add JuanMinoprio/hook-lab
+/plugin install hook-lab@JuanMinoprio
 ```
 
-To update later: `/plugin update hook-lab@EagleJD08`
+To update later: `/plugin update hook-lab@JuanMinoprio`
 
 ### Option 2 — Manual install (inspect the source first)
 
 If you want to read every file before anything touches your machine:
 
 ```bash
-git clone https://github.com/EagleJD08/hook-lab.git
+git clone https://github.com/JuanMinoprio/hook-lab.git
 cd hook-lab
 
 # Copy the skill into your personal Claude Code directory
@@ -174,7 +174,7 @@ The structural rule for Claude Code plugins: `skills/` lives at the **plugin roo
 
 Built this because I was spending too long guessing which hook would land. Now I run every hook through the jury before I post.
 
-If you try it, [open an issue](https://github.com/EagleJD08/hook-lab/issues) or [DM me on LinkedIn](https://www.linkedin.com/in/juanminoprio/).
+If you try it, [open an issue](https://github.com/JuanMinoprio/hook-lab/issues) or [DM me on LinkedIn](https://www.linkedin.com/in/juanminoprio/).
 
 ---
 

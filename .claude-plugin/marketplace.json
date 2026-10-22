@@ -1,8 +1,11 @@
 {
-  "name": "JuanMinoprio",
-  "owner": { "name": "Juan Minoprio" },
+  "name": "hook-lab",
+  "owner": {
+    "name": "Juan Minoprio",
+    "url": "https://juanminoprio.com"
+  },
   "metadata": {
-    "description": "Hook Lab — test a LinkedIn hook 20 ways with a 5-persona AI jury."
+    "description": "Hook Lab: test a LinkedIn hook 20 ways with a 5-persona AI jury."
   },
   "plugins": [
     {

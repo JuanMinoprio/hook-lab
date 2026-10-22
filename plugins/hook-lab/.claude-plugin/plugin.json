@@ -2,6 +2,11 @@
   "name": "hook-lab",
   "version": "1.0.0",
   "description": "Hook testing lab with AI jury panel",
-  "author": { "name": "Juan Minoprio" },
-  "license": "MIT"
+  "author": {
+    "name": "Juan Minoprio",
+    "url": "https://juanminoprio.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/JuanMinoprio/hook-lab",
+  "repository": "https://github.com/JuanMinoprio/hook-lab"
 }

@@ -27,11 +27,17 @@ Two ways. Pick whichever you trust more.
 Inside Claude Code (type these in the Claude Code chat, not a separate terminal):
 
 ```
-/plugin marketplace add JuanMinoprio/hook-lab
-/plugin install hook-lab@JuanMinoprio
+/plugin install hook-lab --marketplace JuanMinoprio/hook-lab
 ```
 
-To update later: `/plugin update hook-lab@JuanMinoprio`
+On Claude Code older than 2.1.275, use two steps instead:
+
+```
+/plugin marketplace add JuanMinoprio/hook-lab
+/plugin install hook-lab@hook-lab
+```
+
+To update later: `/plugin update hook-lab@hook-lab`
 
 ### Option 2 — Manual install (inspect the source first)
 
@@ -175,6 +181,20 @@ The structural rule for Claude Code plugins: `skills/` lives at the **plugin roo
 Built this because I was spending too long guessing which hook would land. Now I run every hook through the jury before I post.
 
 If you try it, [open an issue](https://github.com/JuanMinoprio/hook-lab/issues) or [DM me on LinkedIn](https://www.linkedin.com/in/juanminoprio/).
+
+---
+
+## Privacy and secrets
+
+Nothing here needs an API key, token, or account. The skill runs inside your own Claude Code session, and your personal config stays on your machine at `~/.claude/data/hook-lab/`. If you fork it and add an integration that does need a key, keep it in a local `.env` file: `.gitignore` already blocks `.env` files from being committed.
+
+---
+
+## Want this built for your team?
+
+I'm Juan Minoprio. I build AI tools and workflows for marketing teams: systems like this one, scoped to your stack, your data, and your compliance rules.
+
+**[Start a conversation](https://juanminoprio.com/?utm_source=github&utm_medium=readme&utm_campaign=hook-lab#contact)** or email hello@juanminoprio.com.
 
 ---
 

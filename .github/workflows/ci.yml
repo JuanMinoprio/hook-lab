@@ -1,0 +1,31 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  manifests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Plugin manifests are valid and consistent
+        # Entry names in marketplace.json must match each plugin.json name,
+        # and every relative source must exist, or installs fail.
+        run: |
+          node - <<'JS'
+          const fs = require("fs");
+          const mp = JSON.parse(fs.readFileSync(".claude-plugin/marketplace.json", "utf8"));
+          let bad = 0;
+          for (const p of mp.plugins) {
+            if (typeof p.source !== "string") continue;
+            const manifest = `${p.source}/.claude-plugin/plugin.json`;
+            if (!fs.existsSync(manifest)) { console.error(`missing ${manifest}`); bad++; continue; }
+            const name = JSON.parse(fs.readFileSync(manifest, "utf8")).name;
+            if (name !== p.name) { console.error(`${p.name}: plugin.json name is ${name}`); bad++; }
+          }
+          process.exit(bad ? 1 : 0);
+          JS
